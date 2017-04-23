@@ -1,14 +1,14 @@
 # Fingerprint Image Enhancement
 Implementation of fingerprint image enhancement filters. This repo contains two different filtering tools (`gabor` and `wahab`) and a library file for common utility functions (`utils.py`). Below is a general description of all three files. For more information, please read the source code.
 
-## `wahab`
+## [`wahab`](wahab)
 An executable script file that contains the code for applying the Wahab filter. Based on (and named after) [WCT98](#wct98). It consists mainly of a function called `wahabKernel()` that creates a directional kernel for a given orientation, and a function called `wahabFilter()` that divides the image into cells, and convolves each cell with a directional kernel corresponding to the average orientation of the cell.
 
-## `gabor`
+## [`gabor`](gabor)
 An executable script file that contains the code for applying the Gabor filter. Based on [HWJ98](#hwj98). It contains the gaborKernel() function that creates a Gabor kernel for a given orientation and frequency. It contains two functions, `gaborFilter()` and `gaborFilterSubdivide()` processes the image by cell iteration or by area subdivision, respectively. They both
 divide the image into smaller chunks, and convolve each chunk with a Gabor kernel corresponding to the average orientation in the chunk.
 
-## `utils.py`
+## [`utils.py`](utils.py)
 A Python file that is not meant to be invoked directly, but imported into other scripts. It contains a number of commonly useful functions for fingerprint image enhancement. The most important functions are:
 
 ### `convolve()`
