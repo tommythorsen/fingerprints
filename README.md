@@ -2,10 +2,10 @@
 Implementation of fingerprint image enhancement filters. This repo contains two different filtering tools (`gabor` and `wahab`) and a library file for common utility functions (`utils.py`). Below is a general description of all three files. For more information, please read the source code.
 
 ## `wahab`
-An executable script file that contains the code for applying the Wahab filter. It consists mainly of a function called `wahabKernel()` that creates a directional kernel for a given orientation, and a function called `wahabFilter()` that divides the image into cells, and convolves each cell with a directional kernel corresponding to the average orientation of the cell.
+An executable script file that contains the code for applying the Wahab filter. Based on (and named after) [WCT98](#wct98). It consists mainly of a function called `wahabKernel()` that creates a directional kernel for a given orientation, and a function called `wahabFilter()` that divides the image into cells, and convolves each cell with a directional kernel corresponding to the average orientation of the cell.
 
 ## `gabor`
-An executable script file that contains the code for applying the Gabor filter. It contains the gaborKernel() function that creates a Gabor kernel for a given orientation and frequency. It contains two functions, `gaborFilter()` and `gaborFilterSubdivide()` processes the image by cell iteration or by area subdivision, respectively. They both
+An executable script file that contains the code for applying the Gabor filter. Based on [HWJ98](#hwj98). It contains the gaborKernel() function that creates a Gabor kernel for a given orientation and frequency. It contains two functions, `gaborFilter()` and `gaborFilterSubdivide()` processes the image by cell iteration or by area subdivision, respectively. They both
 divide the image into smaller chunks, and convolve each chunk with a Gabor kernel corresponding to the average orientation in the chunk.
 
 ## `utils.py`
@@ -18,7 +18,7 @@ A custom convolution function that allows us to convolve a whole image, or just 
 Marks areas as good or bad, depending on the standard deviation of values within the area.
 
 ### `estimateOrientations()`
-Creates an orientation field for an image, using a combination of the methods from [HWJ98] and [WCT98].
+Creates an orientation field for an image, using a combination of the methods from [HWJ98](#hwj98) and [WCT98](#wct98).
 
 ### `estimateFrequencies()`
 Createsafrequencyfieldforanimage,usingthemethod from [HWJ98].
