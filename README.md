@@ -18,12 +18,15 @@ A custom convolution function that allows us to convolve a whole image, or just 
 Marks areas as good or bad, depending on the standard deviation of values within the area.
 
 ### `estimateOrientations()`
-Creates an orientation field for an image, using a combination of the methods from [HWJ98](#hwj98) and [WCT98](#wct98).
+Creates an orientation field for an image, using a combination of the methods from [HWJ98](#hwj98) and [SMM94](#smm94).
 
 ### `estimateFrequencies()`
 Createsafrequencyfieldforanimage,usingthemethod from [HWJ98].
 
 # References
+
+## SMM94
+Sherlock, BG; Monro, DM; Millard, K: Fingerprint enhancement by directional Fourier filtering. IEE Proceedings-Vision, Image and Signal Processing, 141(2):87–94, 1994.
 
 ## HWJ98
 Hong, Lin; Wan, Yifei; Jain, Anil: Fingerprint image enhancement: Algorithm and performance evaluation. IEEE transactions on pattern analysis and machine intelligence, 20(8):777–789, 1998.
