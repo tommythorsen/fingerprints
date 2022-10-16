@@ -3,9 +3,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from optparse import OptionParser
-import scipy.misc as misc
-import scipy.ndimage as ndimage
 from skimage import draw
+import imageio
 
 import utils
 
@@ -68,7 +67,7 @@ if __name__ == '__main__':
             suppress=True)
 
     print("Reading image")
-    image = ndimage.imread(sourceImage, mode="L").astype("float64")
+    image = imageio.v2.imread(sourceImage).astype("float64")
     if options.images > 0:
         utils.showImage(image, "original", vmax=255.0)
 
@@ -107,4 +106,4 @@ if __name__ == '__main__':
         plt.show()
 
     if not options.dryrun:
-        misc.imsave(destinationImage, image)
+        imageio.v2.imwrite(destinationImage, image)
